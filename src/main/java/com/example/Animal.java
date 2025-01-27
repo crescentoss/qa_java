@@ -18,7 +18,4 @@ public class Animal {
         return "Существует несколько семейств: заячьи, беличьи, мышиные, кошачьи, псовые, медвежьи, куньи";
     }
 
-    public int getKittens() {
-        return 0;
-    }
 }

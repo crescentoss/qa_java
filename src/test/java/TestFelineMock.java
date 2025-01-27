@@ -13,16 +13,16 @@ public class TestFelineMock {
     Feline feline;
 
     @Test
-    public void testGetFamily() {
+    public void testGetFamilyMock() {
 
-        feline.getFamily();
-        Mockito.verify(feline).getFamily();
+        Mockito.when(feline.getFamily()).thenReturn("Птичьи");
+        Assert.assertEquals("Птичьи", feline.getFamily());
     }
 
     @Test
-    public void testGetCallTimeFamily() {
+    public void testGetKittensParamMock() {
 
-        feline.getFamily();
-        Mockito.verify(feline, Mockito.times(1)).getFamily();
+        Mockito.when(feline.getKittens(2)).thenReturn(5);
+        Assert.assertEquals(5, feline.getKittens(2));
     }
 }
